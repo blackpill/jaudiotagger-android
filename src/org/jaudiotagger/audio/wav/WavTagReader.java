@@ -108,7 +108,7 @@ public class WavTagReader {
      * @return
      * @throws IOException
      */
-    protected boolean readChunk(FileChannel fc, WavTag tag) throws IOException, CannotReadException {
+    public boolean readChunk(FileChannel fc, WavTag tag) throws IOException, CannotReadException {
         Chunk chunk;
         ChunkHeader chunkHeader = new ChunkHeader(ByteOrder.LITTLE_ENDIAN);
         if (!chunkHeader.readHeader(fc)) {
